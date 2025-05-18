@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_vertice" kind="struct" language="C++" prot="public">
+    <compoundname>Vertice</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vertice_1ac1422da85efeb7ca92e69d3758c0209f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_dados" kindref="compound">Dados</ref></type>
+        <definition>Dados dados</definition>
+        <argsstring></argsstring>
+        <name>dados</name>
+        <qualifiedname>Vertice::dados</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="26" column="7" bodyfile="Biblioteca/Estruturas.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vertice_1ac158ff84376e0086b4c05779cb1ee8ab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>struct Vertice * proxVertice</definition>
+        <argsstring></argsstring>
+        <name>proxVertice</name>
+        <qualifiedname>Vertice::proxVertice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="27" column="15" bodyfile="Biblioteca/Estruturas.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vertice_1a793cebcd081c590183fea692702542a0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+        <definition>struct Aresta * primAresta</definition>
+        <argsstring></argsstring>
+        <name>primAresta</name>
+        <qualifiedname>Vertice::primAresta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="28" column="14" bodyfile="Biblioteca/Estruturas.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vertice_1a7432ec6b760cca5a63570ce7d9f9565b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool visitado</definition>
+        <argsstring></argsstring>
+        <name>visitado</name>
+        <qualifiedname>Vertice::visitado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="29" column="6" bodyfile="Biblioteca/Estruturas.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura de um vértice, com os seus dados, arestas e estado de visita. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Aresta</label>
+        <link refid="struct_aresta"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>adjVertice</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>proxAresta</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>primNefasta</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Dados</label>
+        <link refid="struct_dados"/>
+      </node>
+      <node id="4">
+        <label>Nefasta</label>
+        <link refid="struct_nefasta"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxNefasta</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Vertice</label>
+        <link refid="struct_vertice"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>proxVertice</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>primAresta</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Biblioteca/Estruturas.h" line="24" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="25" bodyend="30"/>
+    <listofallmembers>
+      <member refid="struct_vertice_1ac1422da85efeb7ca92e69d3758c0209f" prot="public" virt="non-virtual"><scope>Vertice</scope><name>dados</name></member>
+      <member refid="struct_vertice_1a793cebcd081c590183fea692702542a0" prot="public" virt="non-virtual"><scope>Vertice</scope><name>primAresta</name></member>
+      <member refid="struct_vertice_1ac158ff84376e0086b4c05779cb1ee8ab" prot="public" virt="non-virtual"><scope>Vertice</scope><name>proxVertice</name></member>
+      <member refid="struct_vertice_1a7432ec6b760cca5a63570ce7d9f9565b" prot="public" virt="non-virtual"><scope>Vertice</scope><name>visitado</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_vertice_8c" kind="file" language="C++">
+    <compoundname>Vertice.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="_biblioteca_2_estruturas_8h" local="yes">Estruturas.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>Estruturas.h</label>
+        <link refid="_biblioteca_2_estruturas_8h_source"/>
+      </node>
+      <node id="1">
+        <label>Biblioteca/Vertice.c</label>
+        <link refid="_vertice_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_vertice_8c_1a533a7c57274c657db753cfac67146516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * CriarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna, char frequencia)</argsstring>
+        <name>CriarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>frequencia</declname>
+        </param>
+        <briefdescription>
+<para>Cria e inicializa um novo vértice com os dados fornecidos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cria um novo vértice com dados especificados e insere-o no grafo.</para>
+<para>Define a posição e frequência do vértice, inicializa os seus campos internos e insere-o no grafo através da função AdicionarVertice.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde o vértice será inserido. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequencia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequência da antena. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice criado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Vertice.c" line="17" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="17" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="_vertice_8c_1ab067dca496d8809ff753f95f9256f96d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EliminarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna)</argsstring>
+        <name>EliminarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Remove um vértice do grafo com base na sua posição. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Elimina um vértice do grafo com base na sua posição.</para>
+<para>Procura o vértice na lista ligada do grafo, elimina todas as arestas que apontam para ele e remove-o da lista, libertando a memória.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o novo início da lista de vértices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Vertice.c" line="44" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="44" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="_vertice_8c_1a43dcc1d73d9dd27f9e7288e87b5153d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EditarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna, char frequencia)</argsstring>
+        <name>EditarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>frequencia</declname>
+        </param>
+        <briefdescription>
+<para>Edita um vértice removendo o existente e criando um novo com nova frequência. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Edita um vértice substituindo-o por um novo com frequência alterada.</para>
+<para>Elimina o vértice atual na posição indicada e insere um novo vértice com a nova frequência.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequencia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nova frequência a atribuir. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice editado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Vertice.c" line="90" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="90" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="_vertice_8c_1a76e91a128e5a4b14260e2d6af1d83b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EncontrarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna)</argsstring>
+        <name>EncontrarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Procura e devolve um vértice no grafo com base na sua posição. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Procura e retorna um vértice com base na sua posição.</para>
+<para>Percorre a lista ligada de vértices até encontrar um com as coordenadas especificadas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição a procurar. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição a procurar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice encontrado, ou NULL se não existir. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Vertice.c" line="106" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="_vertice_8c_1a5ccd72e6331c1fd59e51304680d42abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntersecoesVertices</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>IntersecoesVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se existem interseções diagonais entre vértices com frequências diferentes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica a existência de interseções diagonais entre vértices de frequências diferentes.</para>
+<para>Percorre todas as combinações de vértices e, sempre que encontra dois com frequências diferentes, calcula se existe interseção diagonal com base na distância em x e y.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se existir pelo menos uma interseção. </para>
+</simplesect>
+<simplesect kind="return"><para>false Se não existirem interseções diagonais. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Vertice.c" line="130" column="6" bodyfile="Biblioteca/Vertice.c" bodystart="130" bodyend="156"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Estruturas.h&quot;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>CriarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice<sp/>=<sp/>(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_vertice" kindref="compound">Vertice</ref>));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vertice<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;dados.posicao[0]<sp/>=<sp/>linha;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;dados.posicao[1]<sp/>=<sp/>coluna;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;dados.frequencia<sp/>=<sp/>frequencia;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;proxVertice<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;primAresta<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>vertice-&gt;visitado<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>AdicionarVertice(grafo,<sp/>vertice);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vertice;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EliminarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>eliminar<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxVertice-&gt;dados.posicao[0]<sp/>==<sp/>linha<sp/>&amp;&amp;<sp/>auxVertice-&gt;dados.posicao[1])</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>outro<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(outro<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(outro<sp/>!=<sp/>auxVertice)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EliminarAresta(outro,<sp/>auxVertice);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outro<sp/>=<sp/>outro-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(eliminar<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grafo-&gt;primVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eliminar-&gt;proxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(auxVertice);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eliminar<sp/>=<sp/>auxVertice;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EditarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>EliminarVertice(grafo,<sp/>linha,<sp/>coluna);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeEditado<sp/>=<sp/>CriarVertice(grafo,<sp/>linha,<sp/>coluna,<sp/>frequencia);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>verticeEditado;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EncontrarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxVertice-&gt;dados.posicao[0]<sp/>==<sp/>linha<sp/>&amp;&amp;<sp/>auxVertice-&gt;dados.posicao[1])</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>auxVertice;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IntersecoesVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>v1<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(v1<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>v2<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(v2<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v1<sp/>!=<sp/>v2<sp/>&amp;&amp;<sp/>v1-&gt;dados.frequencia<sp/>!=<sp/>v2-&gt;dados.frequencia)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xIntersecao<sp/>=<sp/>abs(v1-&gt;dados.posicao[0]<sp/>-<sp/>v2-&gt;dados.posicao[0]);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>yIntersecao<sp/>=<sp/>abs(v1-&gt;dados.posicao[1]<sp/>-<sp/>v2-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xIntersecao<sp/>==<sp/>yIntersecao)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MostrarIntersecao(v1,<sp/>v2);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2<sp/>=<sp/>v2-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v1<sp/>=<sp/>v1-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Biblioteca/Vertice.c"/>
+  </compounddef>
+</doxygen>

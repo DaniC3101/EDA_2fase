@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_dados_8c" kind="file" language="C++">
+    <compoundname>Dados.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="_biblioteca_2_estruturas_8h" local="yes">Estruturas.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Biblioteca/Dados.c</label>
+        <link refid="_dados_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Estruturas.h</label>
+        <link refid="_biblioteca_2_estruturas_8h_source"/>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_dados_8c_1aac4bde2f2384ec7574401c6a2b12d7f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+        <definition>Grafo * CarregarMatriz</definition>
+        <argsstring>(char *nomeFicheiro)</argsstring>
+        <name>CarregarMatriz</name>
+        <param>
+          <type>char *</type>
+          <declname>nomeFicheiro</declname>
+        </param>
+        <briefdescription>
+<para>Carrega os dados de um grafo a partir de um ficheiro de texto com matriz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Carrega os dados do grafo a partir de um ficheiro de texto com matriz.</para>
+<para>Lê o ficheiro, determina as dimensões da matriz, identifica os vértices e cria o grafo com base nessas informações.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeFicheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro a ser lido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Grafo* Apontador para o grafo carregado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="14" column="7" bodyfile="Biblioteca/Dados.c" bodystart="14" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1aca8cdf55747e5ec0a4767abfda75bf95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ContarLinhasColunas</definition>
+        <argsstring>(FILE *grafoTXT, int dimensao[2], int *contadorVertice)</argsstring>
+        <name>ContarLinhasColunas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>grafoTXT</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimensao</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>contadorVertice</declname>
+        </param>
+        <briefdescription>
+<para>Conta o número de linhas, colunas e vértices num ficheiro de texto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lê o conteúdo do ficheiro caractere a caractere e atualiza os valores das dimensões da matriz, assim como o número total de vértices detetados.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafoTXT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro aberto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimensao</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array onde serão guardadas as dimensões (linhas e colunas). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contadorVertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o contador de vértices encontrados. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Retorna 1 no fim do processamento. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="46" column="5" bodyfile="Biblioteca/Dados.c" bodystart="46" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1a8ce99bb6d7a08df3a6f4dd07cb856bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_dados" kindref="compound">Dados</ref> *</type>
+        <definition>Dados * EncontrarVertices</definition>
+        <argsstring>(FILE *grafoTXT, Dados *dados)</argsstring>
+        <name>EncontrarVertices</name>
+        <param>
+          <type>FILE *</type>
+          <declname>grafoTXT</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dados" kindref="compound">Dados</ref> *</type>
+          <declname>dados</declname>
+        </param>
+        <briefdescription>
+<para>Encontra e extrai os vértices existentes num ficheiro de texto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Encontra e armazena os vértices identificados num ficheiro de texto.</para>
+<para>Percorre o ficheiro, identifica os caracteres válidos como vértices e guarda as suas posições e frequências na estrutura <ref refid="struct_dados" kindref="compound">Dados</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafoTXT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro já aberto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dados</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array de estruturas <ref refid="struct_dados" kindref="compound">Dados</ref> onde serão armazenadas as informações dos vértices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dados* Apontador para o array preenchido com os dados dos vértices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="96" column="7" bodyfile="Biblioteca/Dados.c" bodystart="96" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1ae2e04f9441ec5405dd900a5e0c910613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarVertices</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>GuardarVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Guarda os vértices do grafo num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Percorre a lista de vértices e escreve, um a um, os seus dados e estado de visita num ficheiro binário especificado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="140" column="6" bodyfile="Biblioteca/Dados.c" bodystart="140" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1a2443c9ceb3098fd64a9de47a3ea3d436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+        <definition>Grafo * CarregarVertices</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>CarregarVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Carrega os vértices de um ficheiro binário para um grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Carrega os vértices de um ficheiro binário para o grafo.</para>
+<para>Lê os vértices guardados em ficheiro binário e reconstrói a lista ligada de vértices no grafo fornecido.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde os vértices serão inseridos. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Grafo* Apontador para o grafo atualizado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="170" column="7" bodyfile="Biblioteca/Dados.c" bodystart="170" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1ae8cc9a1eb2a5a3db9dab77fbcf88c613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarArestas</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>GuardarArestas</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Guarda as arestas do grafo num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Para cada vértice do grafo, escreve todas as suas arestas num ficheiro binário. Cada aresta contém as posições de origem e destino, seguidas das respetivas nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="216" column="6" bodyfile="Biblioteca/Dados.c" bodystart="216" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1a73edb3e9b2eada24cd836e7a8b0072bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CarregarArestas</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>CarregarArestas</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Carrega as arestas de um ficheiro binário para o grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lê cada aresta armazenada no ficheiro binário, encontra os vértices de origem e destino, recria as ligações e carrega também as posições nefastas associadas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde as arestas serão inseridas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram carregados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="257" column="6" bodyfile="Biblioteca/Dados.c" bodystart="257" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1ad9eec3b7946d43fcbb7b0c882b0953b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarNefastas</definition>
+        <argsstring>(FILE *ficheiro, Aresta *aresta)</argsstring>
+        <name>GuardarNefastas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>ficheiro</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+          <declname>aresta</declname>
+        </param>
+        <briefdescription>
+<para>Guarda as posições nefastas associadas a uma aresta num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Escreve o número total de posições nefastas da aresta e, em seguida, cada uma das posições com a respetiva frequência.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ficheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aresta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a aresta cujas posições nefastas serão guardadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="294" column="6" bodyfile="Biblioteca/Dados.c" bodystart="294" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="_dados_8c_1aacc0fe5ef8915ecb1c2057383ccc6b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CarregarNefastas</definition>
+        <argsstring>(FILE *ficheiro, Aresta *aresta)</argsstring>
+        <name>CarregarNefastas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>ficheiro</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+          <declname>aresta</declname>
+        </param>
+        <briefdescription>
+<para>Carrega as posições nefastas de uma aresta a partir de um ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lê a quantidade de posições nefastas associadas a uma aresta e insere cada uma na respetiva lista ligada.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ficheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aresta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a aresta onde as posições serão inseridas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Dados.c" line="329" column="6" bodyfile="Biblioteca/Dados.c" bodystart="329" bodyend="347"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Estruturas.h&quot;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>CarregarMatriz(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>nomeFicheiro)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensao[2],<sp/>contadorVertice;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>grafoTXT<sp/>=<sp/>fopen(nomeFicheiro,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grafoTXT<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>ContarLinhasColunas(grafoTXT,<sp/>dimensao,<sp/>&amp;contadorVertice);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo<sp/>=<sp/>CriarGrafo(dimensao[0],<sp/>dimensao[1]);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dados" kindref="compound">Dados</ref>*<sp/>dados<sp/>=<sp/>malloc(30<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_dados" kindref="compound">Dados</ref>));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>EncontrarVertices(grafoTXT,<sp/>dados);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>contadorVertice;<sp/>i++)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CriarVertice(grafo,<sp/>dados[i].posicao[0],<sp/>dados[i].posicao[1],<sp/>dados[i].frequencia);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(grafoTXT);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grafo;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ContarLinhasColunas(FILE*<sp/>grafoTXT,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensao[2],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>contadorVertice)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letra;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>auxColuna<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>dimensao[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>dimensao[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>*contadorVertice<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((letra<sp/>=<sp/>fgetc(grafoTXT))<sp/>!=<sp/>EOF)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dimensao[0]++;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxColuna<sp/>&gt;<sp/>dimensao[1])</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dimensao[1]<sp/>=<sp/>auxColuna;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxColuna<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*contadorVertice)++;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxColuna++;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxColuna<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dimensao[0]++;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxColuna<sp/>&gt;<sp/>dimensao[1])</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dimensao[1]<sp/>=<sp/>auxColuna;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>fseek(grafoTXT,<sp/>0,<sp/>SEEK_SET);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="struct_dados" kindref="compound">Dados</ref>*<sp/>EncontrarVertices(FILE*<sp/>grafoTXT,<sp/><ref refid="struct_dados" kindref="compound">Dados</ref>*<sp/>dados)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>letra;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>auxLinha<sp/>=<sp/>1,<sp/>auxColuna<sp/>=<sp/>0,<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dados<sp/>==<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((letra<sp/>=<sp/>fgetc(grafoTXT))<sp/>!=<sp/>EOF)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxLinha++;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxColuna<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dados[i].posicao[0]<sp/>=<sp/>auxLinha;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dados[i].posicao[1]<sp/>=<sp/>auxColuna;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dados[i].frequencia<sp/>=<sp/>letra;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letra<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxColuna++;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dados;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>ficheiro<sp/>=<sp/>fopen(file,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ficheiro<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice_file" kindref="compound">VerticeFile</ref><sp/>vfile;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vfile.dados<sp/>=<sp/>auxVertice-&gt;dados;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vfile.visitado<sp/>=<sp/>auxVertice-&gt;visitado;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite(&amp;vfile,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_vertice_file" kindref="compound">VerticeFile</ref>),<sp/>1,<sp/>ficheiro);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(ficheiro);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>CarregarVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>ficheiro<sp/>=<sp/>fopen(file,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ficheiro<sp/>==<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice_file" kindref="compound">VerticeFile</ref><sp/>vfile;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>novo<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>anterior<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>grafo-&gt;primVertice<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fread(&amp;vfile,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_vertice_file" kindref="compound">VerticeFile</ref>),<sp/>1,<sp/>ficheiro)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>novo<sp/>=<sp/>(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_vertice" kindref="compound">Vertice</ref>));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>novo-&gt;dados<sp/>=<sp/>vfile.dados;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>novo-&gt;visitado<sp/>=<sp/>vfile.visitado;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>novo-&gt;primAresta<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>novo-&gt;proxVertice<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grafo-&gt;primVertice<sp/>==<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grafo-&gt;primVertice<sp/>=<sp/>novo;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>anterior-&gt;proxVertice<sp/>=<sp/>novo;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>anterior<sp/>=<sp/>novo;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(ficheiro);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarArestas(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>ficheiro<sp/>=<sp/>fopen(file,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ficheiro<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>auxAresta<sp/>=<sp/>auxVertice-&gt;primAresta;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxAresta<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_aresta_file" kindref="compound">ArestaFile</ref><sp/>afile;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afile.origemPos[0]<sp/>=<sp/>auxVertice-&gt;dados.posicao[0];</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afile.origemPos[1]<sp/>=<sp/>auxVertice-&gt;dados.posicao[1];</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afile.destinoPos[0]<sp/>=<sp/>auxAresta-&gt;adjVertice-&gt;dados.posicao[0];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afile.destinoPos[1]<sp/>=<sp/>auxAresta-&gt;adjVertice-&gt;dados.posicao[1];</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite(&amp;afile,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_aresta_file" kindref="compound">ArestaFile</ref>),<sp/>1,<sp/>ficheiro);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GuardarNefastas(ficheiro,<sp/>auxAresta);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxAresta<sp/>=<sp/>auxAresta-&gt;proxAresta;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(ficheiro);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CarregarArestas(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>ficheiro<sp/>=<sp/>fopen(file,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ficheiro<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_aresta_file" kindref="compound">ArestaFile</ref><sp/>afile;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fread(&amp;afile,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_aresta_file" kindref="compound">ArestaFile</ref>),<sp/>1,<sp/>ficheiro)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>origem<sp/>=<sp/>EncontrarVertice(grafo,<sp/>afile.origemPos[0],<sp/>afile.origemPos[1]);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>destino<sp/>=<sp/>EncontrarVertice(grafo,<sp/>afile.destinoPos[0],<sp/>afile.destinoPos[1]);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>nova<sp/>=<sp/>(<ref refid="struct_aresta" kindref="compound">Aresta</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_aresta" kindref="compound">Aresta</ref>));</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;adjVertice<sp/>=<sp/>destino;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;primNefasta<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;proxAresta<sp/>=<sp/>origem-&gt;primAresta;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>origem-&gt;primAresta<sp/>=<sp/>nova;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CarregarNefastas(ficheiro,<sp/>nova);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(ficheiro);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarNefastas(FILE*<sp/>ficheiro,<sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>aresta)</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>contador<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>auxNefasta<sp/>=<sp/>aresta-&gt;primNefasta;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Contar<sp/>nefastas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxNefasta<sp/>!=<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contador++;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxNefasta<sp/>=<sp/>auxNefasta-&gt;proxNefasta;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(&amp;contador,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>ficheiro);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>auxNefasta<sp/>=<sp/>aresta-&gt;primNefasta;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxNefasta<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_nefasta_file" kindref="compound">NefastaFile</ref><sp/>nfile;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nfile.posicao[0]<sp/>=<sp/>auxNefasta-&gt;dados.posicao[0];</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nfile.posicao[1]<sp/>=<sp/>auxNefasta-&gt;dados.posicao[1];</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nfile.frequencia<sp/>=<sp/>auxNefasta-&gt;dados.frequencia;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite(&amp;nfile,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_nefasta_file" kindref="compound">NefastaFile</ref>),<sp/>1,<sp/>ficheiro);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxNefasta<sp/>=<sp/>auxNefasta-&gt;proxNefasta;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CarregarNefastas(FILE*<sp/>ficheiro,<sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>aresta)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fread(&amp;count,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>ficheiro)<sp/>!=<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>i++)</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_nefasta_file" kindref="compound">NefastaFile</ref><sp/>nf;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fread(&amp;nf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_nefasta_file" kindref="compound">NefastaFile</ref>),<sp/>1,<sp/>ficheiro)<sp/>!=<sp/>1)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>nova<sp/>=<sp/>(<ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_nefasta" kindref="compound">Nefasta</ref>));</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;dados.posicao[0]<sp/>=<sp/>nf.posicao[0];</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;dados.posicao[1]<sp/>=<sp/>nf.posicao[1];</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;dados.frequencia<sp/>=<sp/>nf.frequencia;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nova-&gt;proxNefasta<sp/>=<sp/>aresta-&gt;primNefasta;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aresta-&gt;primNefasta<sp/>=<sp/>nova;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Biblioteca/Dados.c"/>
+  </compounddef>
+</doxygen>

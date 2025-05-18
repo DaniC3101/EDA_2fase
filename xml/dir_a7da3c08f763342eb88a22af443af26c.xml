@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_a7da3c08f763342eb88a22af443af26c" kind="dir">
+    <compoundname>Biblioteca</compoundname>
+    <innerfile refid="_algoritmos_procura_8c">AlgoritmosProcura.c</innerfile>
+    <innerfile refid="_aresta_8c">Aresta.c</innerfile>
+    <innerfile refid="_dados_8c">Dados.c</innerfile>
+    <innerfile refid="_biblioteca_2_estruturas_8h">Estruturas.h</innerfile>
+    <innerfile refid="_grafo_8c">Grafo.c</innerfile>
+    <innerfile refid="_nefasta_8c">Nefasta.c</innerfile>
+    <innerfile refid="_queue_8c">Queue.c</innerfile>
+    <innerfile refid="_vertice_8c">Vertice.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Biblioteca/"/>
+  </compounddef>
+</doxygen>

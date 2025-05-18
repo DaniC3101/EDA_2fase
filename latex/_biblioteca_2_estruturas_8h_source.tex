@@ -1,0 +1,124 @@
+\doxysection{Estruturas.\+h}
+\hypertarget{_biblioteca_2_estruturas_8h_source}{}\label{_biblioteca_2_estruturas_8h_source}\index{Biblioteca/Estruturas.h@{Biblioteca/Estruturas.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ posicao[2];}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{char}\ frequencia;}
+\DoxyCodeLine{00010\ \}\ \mbox{\hyperlink{struct_dados}{Dados}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vertice}{Vertice}}*\ primVertice;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ dimensao[2];}
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{struct_grafo}{Grafo}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{struct_dados}{Dados}}\ dados;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_vertice}{Vertice}}*\ proxVertice;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}*\ primAresta;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ visitado;}
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_vertice}{Vertice}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ adjVertice;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_aresta}{Aresta}}*\ proxAresta;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_nefasta}{Nefasta}}*\ primNefasta;}
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{struct_aresta}{Aresta}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_nefasta}{Nefasta}}*\ proxNefasta;}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_dados}{Dados}}\ dados;}
+\DoxyCodeLine{00049\ \}\ \mbox{\hyperlink{struct_nefasta}{Nefasta}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ vertice;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_espera}{Espera}}*\ proxVertice;}
+\DoxyCodeLine{00058\ \}\ \mbox{\hyperlink{struct_espera}{Espera}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{struct_dados}{Dados}}\ dados;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ visitado;}
+\DoxyCodeLine{00067\ \}\ \mbox{\hyperlink{struct_vertice_file}{VerticeFile}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ origemPos[2];}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ destinoPos[2];}
+\DoxyCodeLine{00076\ \}\ \mbox{\hyperlink{struct_aresta_file}{ArestaFile}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ posicao[2];}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{char}\ frequencia;}
+\DoxyCodeLine{00085\ \}\ \mbox{\hyperlink{struct_nefasta_file}{NefastaFile}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ ===\ Declarações\ de\ Funções\ ===}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ CarregarMatriz(\textcolor{keywordtype}{char}*\ nomeFicheiro);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ ContarLinhasColunas(FILE*\ grafoTXT,\ \textcolor{keywordtype}{int}\ dimensao[],\ \textcolor{keywordtype}{int}*\ contadorVertice);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \mbox{\hyperlink{struct_dados}{Dados}}*\ EncontrarVertices(FILE*\ grafoTXT,\ \mbox{\hyperlink{struct_dados}{Dados}}*\ dados);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{bool}\ GuardarVertices(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{char}*\ file);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ CarregarVertices(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{char}*\ file);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{bool}\ GuardarArestas(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{char}*\ file);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{bool}\ CarregarArestas(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{char}*\ file);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{bool}\ GuardarNefastas(FILE*\ ficheiro,\ \mbox{\hyperlink{struct_aresta}{Aresta}}*\ aresta);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{void}\ CarregarNefastas(FILE*\ ficheiro,\ \mbox{\hyperlink{struct_aresta}{Aresta}}*\ aresta);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00137\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ CriarGrafo(\textcolor{keywordtype}{int}\ linhas,\ \textcolor{keywordtype}{int}\ colunas);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{bool}\ AdicionarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeCriado);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{bool}\ PercorrerGrafo(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ vertice);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ CriarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \textcolor{keywordtype}{char}\ frequencia);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ EliminarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ EditarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \textcolor{keywordtype}{char}\ frequencia);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00167\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ EncontrarVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00172\ \mbox{\hyperlink{struct_aresta}{Aresta}}*\ CriarAresta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeAtual,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeInserido);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00177\ \mbox{\hyperlink{struct_aresta}{Aresta}}*\ EliminarAresta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeOrigem,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeDestino);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{bool}\ AdicionarNefasta(\mbox{\hyperlink{struct_nefasta}{Nefasta}}*\ nefastaAtual,\ \mbox{\hyperlink{struct_nefasta}{Nefasta}}*\ nefastaInserida,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeAtual,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeInserido);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{bool}\ PercorrerArestasDFS(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ vertice);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{bool}\ ExisteVertice(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ atual[],\ \textcolor{keywordtype}{int}\ inserido[]);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{bool}\ CriarPosicaoNefasta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeAtual,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeInserido,\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00202\ \mbox{\hyperlink{struct_nefasta}{Nefasta}}*\ CriarNefasta(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeAtual,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ verticeInserido,\ \mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo,\ \textcolor{keywordtype}{int}\ atual[],\ \textcolor{keywordtype}{int}\ inserido[]);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{bool}\ PercorrerGrafoDFS(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00212\ \textcolor{keywordtype}{bool}\ PercorrerVerticeDFS(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ primVertice,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ segVertice);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00217\ \textcolor{keywordtype}{bool}\ PercorrerVerticeBFS(\mbox{\hyperlink{struct_vertice}{Vertice}}*\ origem,\ \mbox{\hyperlink{struct_vertice}{Vertice}}*\ destino);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00222\ \textcolor{keywordtype}{bool}\ PercorrerGrafoBFS(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo);}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00227\ \mbox{\hyperlink{struct_espera}{Espera}}*\ PercorrerArestasBFS(\mbox{\hyperlink{struct_aresta}{Aresta}}*\ listaArestas,\ \mbox{\hyperlink{struct_espera}{Espera}}*\ queue);}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00232\ \textcolor{keywordtype}{bool}\ IntersecoesVertices(\mbox{\hyperlink{struct_grafo}{Grafo}}*\ grafo);}
+
+\end{DoxyCode}

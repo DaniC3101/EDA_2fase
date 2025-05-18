@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_nefasta_file" kind="struct" language="C++" prot="public">
+    <compoundname>NefastaFile</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_nefasta_file_1a72531b1d83250cd2d995c9cd3169f38c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int posicao</definition>
+        <argsstring>[2]</argsstring>
+        <name>posicao</name>
+        <qualifiedname>NefastaFile::posicao</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="83" column="5" bodyfile="Biblioteca/Estruturas.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_nefasta_file_1a643fe33fe56ce4c44a24d28a121d5d23" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char frequencia</definition>
+        <argsstring></argsstring>
+        <name>frequencia</name>
+        <qualifiedname>NefastaFile::frequencia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="84" column="6" bodyfile="Biblioteca/Estruturas.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura utilizada para guardar uma posição nefasta em ficheiro binário. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Biblioteca/Estruturas.h" line="81" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="82" bodyend="85"/>
+    <listofallmembers>
+      <member refid="struct_nefasta_file_1a643fe33fe56ce4c44a24d28a121d5d23" prot="public" virt="non-virtual"><scope>NefastaFile</scope><name>frequencia</name></member>
+      <member refid="struct_nefasta_file_1a72531b1d83250cd2d995c9cd3169f38c" prot="public" virt="non-virtual"><scope>NefastaFile</scope><name>posicao</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

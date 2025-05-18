@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|solutionrelative:CamadaMain\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|solutionrelative:CamadaMain\\ApoioMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{63A302F4-6B21-41ED-B10B-93C8144D29A0}|CamadaMain\\CamadaMain.vcxproj|solutionrelative:CamadaMain\\ApoioMain.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Estruturas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Estruturas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Vertice.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Vertice.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Queue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Nefasta.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Nefasta.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Grafo.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Grafo.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Dados.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Dados.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Aresta.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\Aresta.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\AlgoritmosProcura.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB202F4C-0286-479D-985E-2458C035F586}|Biblioteca\\Biblioteca.vcxproj|solutionrelative:Biblioteca\\AlgoritmosProcura.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 412,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApoioMain.h",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.h",
+              "RelativeDocumentMoniker": "CamadaMain\\ApoioMain.h",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.h*",
+              "RelativeToolTip": "CamadaMain\\ApoioMain.h*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-18T20:39:06.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Queue.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Queue.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Queue.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Queue.c*",
+              "RelativeToolTip": "Biblioteca\\Queue.c*",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-18T20:37:17.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Nefasta.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Nefasta.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Nefasta.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Nefasta.c*",
+              "RelativeToolTip": "Biblioteca\\Nefasta.c*",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAcwKAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-18T20:36:09.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\main.c",
+              "RelativeDocumentMoniker": "CamadaMain\\main.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\main.c*",
+              "RelativeToolTip": "CamadaMain\\main.c*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-18T20:11:41.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Vertice.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Vertice.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Vertice.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Vertice.c*",
+              "RelativeToolTip": "Biblioteca\\Vertice.c*",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAcwIAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-18T16:12:56.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Estruturas.h",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Estruturas.h",
+              "RelativeDocumentMoniker": "Biblioteca\\Estruturas.h",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Estruturas.h*",
+              "RelativeToolTip": "Biblioteca\\Estruturas.h*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-18T13:57:21.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AlgoritmosProcura.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\AlgoritmosProcura.c",
+              "RelativeDocumentMoniker": "Biblioteca\\AlgoritmosProcura.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\AlgoritmosProcura.c*",
+              "RelativeToolTip": "Biblioteca\\AlgoritmosProcura.c*",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-18T15:12:37.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApoioMain.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.c",
+              "RelativeDocumentMoniker": "CamadaMain\\ApoioMain.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\CamadaMain\\ApoioMain.c*",
+              "RelativeToolTip": "CamadaMain\\ApoioMain.c*",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-17T15:16:45.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Grafo.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Grafo.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Grafo.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Grafo.c*",
+              "RelativeToolTip": "Biblioteca\\Grafo.c*",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-17T15:13:25.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dados.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Dados.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Dados.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Dados.c*",
+              "RelativeToolTip": "Biblioteca\\Dados.c*",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAcwEcBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-17T15:11:52.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Aresta.c",
+              "DocumentMoniker": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Aresta.c",
+              "RelativeDocumentMoniker": "Biblioteca\\Aresta.c",
+              "ToolTip": "C:\\Users\\danib\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\VC\\Trabalho_EDA_2FASE_23016\\Biblioteca\\Aresta.c*",
+              "RelativeToolTip": "Biblioteca\\Aresta.c*",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAcwFQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-17T15:11:06.19Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

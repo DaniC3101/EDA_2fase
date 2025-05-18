@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_espera" kind="struct" language="C++" prot="public">
+    <compoundname>Espera</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_espera_1a8cf8f3c26f8a6dc8b03932b96fc8eaca" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * vertice</definition>
+        <argsstring></argsstring>
+        <name>vertice</name>
+        <qualifiedname>Espera::vertice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="56" column="9" bodyfile="Biblioteca/Estruturas.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_espera_1a153c8b385890dc67954f9ea2e5540685" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_espera" kindref="compound">Espera</ref> *</type>
+        <definition>struct Espera * proxVertice</definition>
+        <argsstring></argsstring>
+        <name>proxVertice</name>
+        <qualifiedname>Espera::proxVertice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="57" column="14" bodyfile="Biblioteca/Estruturas.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura auxiliar utilizada na travessia em largura (BFS). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Aresta</label>
+        <link refid="struct_aresta"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>adjVertice</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxAresta</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>primNefasta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Dados</label>
+        <link refid="struct_dados"/>
+      </node>
+      <node id="1">
+        <label>Espera</label>
+        <link refid="struct_espera"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>vertice</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>proxVertice</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Nefasta</label>
+        <link refid="struct_nefasta"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>proxNefasta</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Vertice</label>
+        <link refid="struct_vertice"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>proxVertice</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>primAresta</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Biblioteca/Estruturas.h" line="54" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="55" bodyend="58"/>
+    <listofallmembers>
+      <member refid="struct_espera_1a153c8b385890dc67954f9ea2e5540685" prot="public" virt="non-virtual"><scope>Espera</scope><name>proxVertice</name></member>
+      <member refid="struct_espera_1a8cf8f3c26f8a6dc8b03932b96fc8eaca" prot="public" virt="non-virtual"><scope>Espera</scope><name>vertice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

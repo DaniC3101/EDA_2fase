@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_apoio_main_8c" kind="file" language="C++">
+    <compoundname>ApoioMain.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="_camada_main_2_estruturas_8h" local="yes">Estruturas.h</includes>
+    <includes refid="_apoio_main_8h" local="yes">ApoioMain.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>CamadaMain/ApoioMain.c</label>
+        <link refid="_apoio_main_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ApoioMain.h</label>
+        <link refid="_apoio_main_8h_source"/>
+      </node>
+      <node id="3">
+        <label>Estruturas.h</label>
+        <link refid="_camada_main_2_estruturas_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_apoio_main_8c_1aeb4f709ce228bc283b3b08506e76ef7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaVertices</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>ListaVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Lista todos os vértices do grafo com as suas respetivas posições e frequências. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lista todos os vértices do grafo.</para>
+<para>Percorre a lista ligada de vértices do grafo e imprime a sua informação no ecrã.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser listado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="13" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="13" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1aa0a964e8783bc8048f92498d2fb5facb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostraGrafo</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>MostraGrafo</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Mostra todos os vértices, as arestas e as posições nefastas do grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mostra todos os vértices, arestas e posições nefastas do grafo.</para>
+<para>Imprime no ecrã a lista de vértices, seguida das suas arestas e respetivas posições nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser mostrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="32" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="32" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1a3a2e5a1d7ec919921ac1550c27946723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaArestas</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>ListaArestas</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Lista todas as arestas associadas a um determinado vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lista todas as arestas de um determinado vértice.</para>
+<para>Percorre a lista de arestas do vértice e imprime as posições dos vértices adjacentes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice cujas arestas serão listadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="53" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="53" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1a918026c2d3142332299c187b0dc5742a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaNefastas</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>ListaNefastas</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Lista todas as posições nefastas associadas às arestas de um vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Para cada aresta do vértice, imprime as posições consideradas nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice cujas posições nefastas serão listadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="73" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="73" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1aba4134f8016dc5c5d2d128cc91d9ef3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostrarCaminho</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>MostrarCaminho</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Mostra uma etapa do caminho durante a travessia do grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mostra a posição atual do vértice durante um percurso.</para>
+<para>Imprime no ecrã a posição do vértice visitado durante o percurso.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice a ser mostrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="96" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1a817025e57a1aa601c380cecd632b4f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostrarMatriz</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>MostrarMatriz</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Mostra a representação matricial do grafo no ecrã. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mostra o grafo representado como matriz.</para>
+<para>Imprime a matriz com as antenas (frequências), posições nefastas (&apos;#&apos;) e espaços vazios (&apos;.&apos;).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser representado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="107" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="107" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8c_1afd643db04618a9467f7682297d11ab16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostrarIntersecao</definition>
+        <argsstring>(Vertice *v1, Vertice *v2)</argsstring>
+        <name>MostrarIntersecao</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+<para>Mostra uma interseção diagonal entre dois vértices com frequências diferentes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utilizada para sinalizar a deteção de interseções diagonais no grafo.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o primeiro vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o segundo vértice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.c" line="169" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="169" bodyend="172"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Estruturas.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ApoioMain.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;<sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Vertice<sp/>:<sp/>%d<sp/>\n<sp/>Coordenada:<sp/>(%d,<sp/>%d)<sp/>\n<sp/>Frequencia:<sp/>%c\n&quot;</highlight><highlight class="normal">,i,<sp/>auxVertice-&gt;dados.posicao[0],<sp/>auxVertice-&gt;dados.posicao[1],auxVertice-&gt;dados.frequencia);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;<sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostraGrafo(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>ListaVertices(grafo);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ListaArestas(auxVertice);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ListaNefastas(auxVertice);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaArestas(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>auxAresta<sp/>=<sp/>vertice-&gt;primAresta;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Vertice<sp/>(%d,%d)<sp/>com<sp/>as<sp/>seguintes<sp/>arestas:<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>vertice-&gt;dados.posicao[0],<sp/>vertice-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxAresta<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>auxAresta-&gt;adjVertice;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-&gt;<sp/>Aresta:<sp/>(%d<sp/>,<sp/>%d)<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>auxVertice-&gt;dados.posicao[0],<sp/>auxVertice-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxAresta<sp/>=<sp/>auxAresta-&gt;proxAresta;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaNefastas(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>auxAresta<sp/>=<sp/>vertice-&gt;primAresta;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxAresta<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>auxAresta-&gt;adjVertice;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Aresta<sp/>(%d,<sp/>%d)\n&quot;</highlight><highlight class="normal">,<sp/>auxVertice-&gt;dados.posicao[0],<sp/>auxVertice-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>auxNefasta<sp/>=<sp/>auxAresta-&gt;primNefasta;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxNefasta<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-&gt;<sp/>Nefasta<sp/>(%d<sp/>,<sp/>%d)\n&quot;</highlight><highlight class="normal">,<sp/>auxNefasta-&gt;dados.posicao[0],<sp/>auxNefasta-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxNefasta<sp/>=<sp/>auxNefasta-&gt;proxNefasta;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxAresta<sp/>=<sp/>auxAresta-&gt;proxAresta;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostrarCaminho(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;-&gt;<sp/>Caminho:<sp/>(%d,<sp/>%d)\n&quot;</highlight><highlight class="normal">,<sp/>vertice-&gt;dados.posicao[0],<sp/>vertice-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostrarMatriz(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>grafo-&gt;dimensao[0];<sp/>i++)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1;<sp/>j<sp/>&lt;=<sp/>grafo-&gt;dimensao[1];<sp/>j++)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>encontrado<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>auxVertice<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(auxVertice<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(auxVertice-&gt;dados.posicao[0]<sp/>==<sp/>i<sp/>&amp;&amp;<sp/>auxVertice-&gt;dados.posicao[1]<sp/>==<sp/>j)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/>auxVertice-&gt;dados.frequencia);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encontrado<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxVertice<sp/>=<sp/>auxVertice-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(encontrado<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>v2<sp/>=<sp/>grafo-&gt;primVertice;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(v2<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>encontrado<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>a<sp/>=<sp/>v2-&gt;primAresta;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(a<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>encontrado<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>n<sp/>=<sp/>a-&gt;primNefasta;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(n<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n-&gt;dados.posicao[0]<sp/>==<sp/>i<sp/>&amp;&amp;<sp/>n-&gt;dados.posicao[1]<sp/>==<sp/>j)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>encontrado<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>n-&gt;proxNefasta;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>a-&gt;proxAresta;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2<sp/>=<sp/>v2-&gt;proxVertice;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(encontrado<sp/>!=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostrarIntersecao(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>v1,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>v2)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Intersecao<sp/>diagonal<sp/>entre<sp/>&apos;%c&apos;<sp/>(%d,%d)<sp/>e<sp/>&apos;%c&apos;<sp/>(%d,%d)\n&quot;</highlight><highlight class="normal">,<sp/>v1-&gt;dados.frequencia,<sp/>v1-&gt;dados.posicao[0],<sp/>v1-&gt;dados.posicao[1],<sp/>v2-&gt;dados.frequencia,<sp/>v2-&gt;dados.posicao[0],<sp/>v2-&gt;dados.posicao[1]);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="CamadaMain/ApoioMain.c"/>
+  </compounddef>
+</doxygen>

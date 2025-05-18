@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_aresta" kind="struct" language="C++" prot="public">
+    <compoundname>Aresta</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_aresta_1a99bddf7062ab8a227bea40bfc9335c26" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * adjVertice</definition>
+        <argsstring></argsstring>
+        <name>adjVertice</name>
+        <qualifiedname>Aresta::adjVertice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="37" column="9" bodyfile="Biblioteca/Estruturas.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_aresta_1ac2cf601be20304ea05922827b7d2e3b9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+        <definition>struct Aresta * proxAresta</definition>
+        <argsstring></argsstring>
+        <name>proxAresta</name>
+        <qualifiedname>Aresta::proxAresta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="38" column="14" bodyfile="Biblioteca/Estruturas.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_aresta_1a02b362aec6e38e5dda19737b5640371d" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> *</type>
+        <definition>struct Nefasta * primNefasta</definition>
+        <argsstring></argsstring>
+        <name>primNefasta</name>
+        <qualifiedname>Aresta::primNefasta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="39" column="15" bodyfile="Biblioteca/Estruturas.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura de uma aresta, com ligação a um vértice adjacente e lista de nefastas. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Aresta</label>
+        <link refid="struct_aresta"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>adjVertice</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>proxAresta</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>primNefasta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Dados</label>
+        <link refid="struct_dados"/>
+      </node>
+      <node id="4">
+        <label>Nefasta</label>
+        <link refid="struct_nefasta"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxNefasta</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Vertice</label>
+        <link refid="struct_vertice"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>proxVertice</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>primAresta</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Biblioteca/Estruturas.h" line="35" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="36" bodyend="40"/>
+    <listofallmembers>
+      <member refid="struct_aresta_1a99bddf7062ab8a227bea40bfc9335c26" prot="public" virt="non-virtual"><scope>Aresta</scope><name>adjVertice</name></member>
+      <member refid="struct_aresta_1a02b362aec6e38e5dda19737b5640371d" prot="public" virt="non-virtual"><scope>Aresta</scope><name>primNefasta</name></member>
+      <member refid="struct_aresta_1ac2cf601be20304ea05922827b7d2e3b9" prot="public" virt="non-virtual"><scope>Aresta</scope><name>proxAresta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

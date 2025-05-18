@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_apoio_main_8h" kind="file" language="C++">
+    <compoundname>ApoioMain.h</compoundname>
+    <includedby refid="_apoio_main_8c" local="yes">CamadaMain/ApoioMain.c</includedby>
+    <includedby refid="main_8c" local="yes">CamadaMain/main.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>CamadaMain/ApoioMain.h</label>
+        <link refid="_apoio_main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CamadaMain/main.c</label>
+        <link refid="main_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_apoio_main_8h_1aa0a964e8783bc8048f92498d2fb5facb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostraGrafo</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>MostraGrafo</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Mostra todos os vértices, arestas e posições nefastas do grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Chama as funções de listagem de vértices, arestas e nefastas para apresentar de forma estruturada o conteúdo do grafo.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser mostrado.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Mostra todos os vértices, arestas e posições nefastas do grafo.</para>
+<para>Imprime no ecrã a lista de vértices, seguida das suas arestas e respetivas posições nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser mostrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="11" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="32" bodyend="45" declfile="CamadaMain/ApoioMain.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8h_1aeb4f709ce228bc283b3b08506e76ef7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaVertices</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>ListaVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Lista todos os vértices do grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Apresenta a posição e a frequência de cada vértice presente no grafo.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Lista todos os vértices do grafo.</para>
+<para>Percorre a lista ligada de vértices do grafo e imprime a sua informação no ecrã.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser listado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="20" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="13" bodyend="24" declfile="CamadaMain/ApoioMain.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8h_1a3a2e5a1d7ec919921ac1550c27946723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaArestas</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>ListaArestas</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Lista todas as arestas de um determinado vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mostra os vértices adjacentes ligados por arestas ao vértice fornecido.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice cujas arestas serão listadas.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Lista todas as arestas de um determinado vértice.</para>
+<para>Percorre a lista de arestas do vértice e imprime as posições dos vértices adjacentes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice cujas arestas serão listadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="29" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="53" bodyend="64" declfile="CamadaMain/ApoioMain.h" declline="29" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8h_1a918026c2d3142332299c187b0dc5742a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListaNefastas</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>ListaNefastas</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Lista todas as posições nefastas associadas às arestas de um vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Percorre todas as arestas do vértice e imprime as respetivas posições nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Para cada aresta do vértice, imprime as posições consideradas nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice cujas posições nefastas serão listadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="38" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="73" bodyend="88" declfile="CamadaMain/ApoioMain.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8h_1aba4134f8016dc5c5d2d128cc91d9ef3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostrarCaminho</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>MostrarCaminho</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Mostra a posição atual do vértice durante um percurso. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utilizada para indicar os vértices visitados em travessias do grafo.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice atual.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Mostra a posição atual do vértice durante um percurso.</para>
+<para>Imprime no ecrã a posição do vértice visitado durante o percurso.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice a ser mostrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="47" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="96" bodyend="99" declfile="CamadaMain/ApoioMain.h" declline="47" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_apoio_main_8h_1a817025e57a1aa601c380cecd632b4f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MostrarMatriz</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>MostrarMatriz</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Mostra o grafo representado como matriz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Apresenta graficamente a matriz do grafo, incluindo antenas, posições nefastas e espaços vazios.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser representado.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Mostra o grafo representado como matriz.</para>
+<para>Imprime a matriz com as antenas (frequências), posições nefastas (&apos;#&apos;) e espaços vazios (&apos;.&apos;).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser representado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CamadaMain/ApoioMain.h" line="56" column="6" bodyfile="CamadaMain/ApoioMain.c" bodystart="107" bodyend="159" declfile="CamadaMain/ApoioMain.h" declline="56" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostraGrafo(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaArestas(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ListaNefastas(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostrarCaminho(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MostrarMatriz(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+    </programlisting>
+    <location file="CamadaMain/ApoioMain.h"/>
+  </compounddef>
+</doxygen>

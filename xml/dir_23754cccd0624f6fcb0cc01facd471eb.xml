@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_23754cccd0624f6fcb0cc01facd471eb" kind="dir">
+    <compoundname>CamadaMain</compoundname>
+    <innerfile refid="_apoio_main_8c">ApoioMain.c</innerfile>
+    <innerfile refid="_apoio_main_8h">ApoioMain.h</innerfile>
+    <innerfile refid="_camada_main_2_estruturas_8h">Estruturas.h</innerfile>
+    <innerfile refid="main_8c">main.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CamadaMain/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1501 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_biblioteca_2_estruturas_8h" kind="file" language="C++">
+    <compoundname>Estruturas.h</compoundname>
+    <includedby refid="_algoritmos_procura_8c" local="yes">Biblioteca/AlgoritmosProcura.c</includedby>
+    <includedby refid="_aresta_8c" local="yes">Biblioteca/Aresta.c</includedby>
+    <includedby refid="_dados_8c" local="yes">Biblioteca/Dados.c</includedby>
+    <includedby refid="_grafo_8c" local="yes">Biblioteca/Grafo.c</includedby>
+    <includedby refid="_nefasta_8c" local="yes">Biblioteca/Nefasta.c</includedby>
+    <includedby refid="_queue_8c" local="yes">Biblioteca/Queue.c</includedby>
+    <includedby refid="_vertice_8c" local="yes">Biblioteca/Vertice.c</includedby>
+    <innerclass refid="struct_dados" prot="public">Dados</innerclass>
+    <innerclass refid="struct_grafo" prot="public">Grafo</innerclass>
+    <innerclass refid="struct_vertice" prot="public">Vertice</innerclass>
+    <innerclass refid="struct_aresta" prot="public">Aresta</innerclass>
+    <innerclass refid="struct_nefasta" prot="public">Nefasta</innerclass>
+    <innerclass refid="struct_espera" prot="public">Espera</innerclass>
+    <innerclass refid="struct_vertice_file" prot="public">VerticeFile</innerclass>
+    <innerclass refid="struct_aresta_file" prot="public">ArestaFile</innerclass>
+    <innerclass refid="struct_nefasta_file" prot="public">NefastaFile</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1aac4bde2f2384ec7574401c6a2b12d7f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+        <definition>Grafo * CarregarMatriz</definition>
+        <argsstring>(char *nomeFicheiro)</argsstring>
+        <name>CarregarMatriz</name>
+        <param>
+          <type>char *</type>
+          <declname>nomeFicheiro</declname>
+        </param>
+        <briefdescription>
+<para>Carrega os dados do grafo a partir de um ficheiro de texto com matriz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Carrega os dados do grafo a partir de um ficheiro de texto com matriz.</para>
+<para>Lê o ficheiro, determina as dimensões da matriz, identifica os vértices e cria o grafo com base nessas informações.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeFicheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro a ser lido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Grafo* Apontador para o grafo carregado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="92" column="7" bodyfile="Biblioteca/Dados.c" bodystart="14" bodyend="34" declfile="Biblioteca/Estruturas.h" declline="92" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1afdd7a44c6441b1ac440935092bd85084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ContarLinhasColunas</definition>
+        <argsstring>(FILE *grafoTXT, int dimensao[], int *contadorVertice)</argsstring>
+        <name>ContarLinhasColunas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>grafoTXT</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimensao</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>contadorVertice</declname>
+        </param>
+        <briefdescription>
+<para>Conta o número de linhas, colunas e vértices num ficheiro de texto. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="97" column="5" declfile="Biblioteca/Estruturas.h" declline="97" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a8ce99bb6d7a08df3a6f4dd07cb856bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_dados" kindref="compound">Dados</ref> *</type>
+        <definition>Dados * EncontrarVertices</definition>
+        <argsstring>(FILE *grafoTXT, Dados *dados)</argsstring>
+        <name>EncontrarVertices</name>
+        <param>
+          <type>FILE *</type>
+          <declname>grafoTXT</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_dados" kindref="compound">Dados</ref> *</type>
+          <declname>dados</declname>
+        </param>
+        <briefdescription>
+<para>Encontra e armazena os vértices identificados num ficheiro de texto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Encontra e armazena os vértices identificados num ficheiro de texto.</para>
+<para>Percorre o ficheiro, identifica os caracteres válidos como vértices e guarda as suas posições e frequências na estrutura <ref refid="struct_dados" kindref="compound">Dados</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafoTXT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro já aberto. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dados</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array de estruturas <ref refid="struct_dados" kindref="compound">Dados</ref> onde serão armazenadas as informações dos vértices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Dados* Apontador para o array preenchido com os dados dos vértices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="102" column="7" bodyfile="Biblioteca/Dados.c" bodystart="96" bodyend="129" declfile="Biblioteca/Estruturas.h" declline="102" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ae2e04f9441ec5405dd900a5e0c910613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarVertices</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>GuardarVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Guarda os vértices do grafo num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Percorre a lista de vértices e escreve, um a um, os seus dados e estado de visita num ficheiro binário especificado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="107" column="6" bodyfile="Biblioteca/Dados.c" bodystart="140" bodyend="159" declfile="Biblioteca/Estruturas.h" declline="107" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a2443c9ceb3098fd64a9de47a3ea3d436" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+        <definition>Grafo * CarregarVertices</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>CarregarVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Carrega os vértices de um ficheiro binário para o grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Carrega os vértices de um ficheiro binário para o grafo.</para>
+<para>Lê os vértices guardados em ficheiro binário e reconstrói a lista ligada de vértices no grafo fornecido.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde os vértices serão inseridos. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Grafo* Apontador para o grafo atualizado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="112" column="7" bodyfile="Biblioteca/Dados.c" bodystart="170" bodyend="205" declfile="Biblioteca/Estruturas.h" declline="112" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ae8cc9a1eb2a5a3db9dab77fbcf88c613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarArestas</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>GuardarArestas</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Guarda as arestas do grafo num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Para cada vértice do grafo, escreve todas as suas arestas num ficheiro binário. Cada aresta contém as posições de origem e destino, seguidas das respetivas nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="117" column="6" bodyfile="Biblioteca/Dados.c" bodystart="216" bodyend="246" declfile="Biblioteca/Estruturas.h" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a73edb3e9b2eada24cd836e7a8b0072bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CarregarArestas</definition>
+        <argsstring>(Grafo *grafo, char *file)</argsstring>
+        <name>CarregarArestas</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Carrega as arestas de um ficheiro binário para o grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lê cada aresta armazenada no ficheiro binário, encontra os vértices de origem e destino, recria as ligações e carrega também as posições nefastas associadas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde as arestas serão inseridas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram carregados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="122" column="6" bodyfile="Biblioteca/Dados.c" bodystart="257" bodyend="283" declfile="Biblioteca/Estruturas.h" declline="122" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ad9eec3b7946d43fcbb7b0c882b0953b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GuardarNefastas</definition>
+        <argsstring>(FILE *ficheiro, Aresta *aresta)</argsstring>
+        <name>GuardarNefastas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>ficheiro</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+          <declname>aresta</declname>
+        </param>
+        <briefdescription>
+<para>Guarda as posições nefastas associadas a uma aresta num ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Escreve o número total de posições nefastas da aresta e, em seguida, cada uma das posições com a respetiva frequência.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ficheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aresta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a aresta cujas posições nefastas serão guardadas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se os dados foram guardados com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="127" column="6" bodyfile="Biblioteca/Dados.c" bodystart="294" bodyend="319" declfile="Biblioteca/Estruturas.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1aacc0fe5ef8915ecb1c2057383ccc6b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CarregarNefastas</definition>
+        <argsstring>(FILE *ficheiro, Aresta *aresta)</argsstring>
+        <name>CarregarNefastas</name>
+        <param>
+          <type>FILE *</type>
+          <declname>ficheiro</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+          <declname>aresta</declname>
+        </param>
+        <briefdescription>
+<para>Carrega as posições nefastas de uma aresta a partir de um ficheiro binário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Lê a quantidade de posições nefastas associadas a uma aresta e insere cada uma na respetiva lista ligada.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ficheiro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o ficheiro binário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aresta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a aresta onde as posições serão inseridas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="132" column="6" bodyfile="Biblioteca/Dados.c" bodystart="329" bodyend="347" declfile="Biblioteca/Estruturas.h" declline="132" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a3e1bcf3f33a4ca08c529b2583480ec98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+        <definition>Grafo * CriarGrafo</definition>
+        <argsstring>(int linhas, int colunas)</argsstring>
+        <name>CriarGrafo</name>
+        <param>
+          <type>int</type>
+          <declname>linhas</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>colunas</declname>
+        </param>
+        <briefdescription>
+<para>Cria um novo grafo com base nas dimensões especificadas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cria um novo grafo com base nas dimensões especificadas.</para>
+<para>Aloca memória para a estrutura do grafo, define as suas dimensões e inicializa o ponteiro para o primeiro vértice como NULL.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>linhas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de linhas da matriz do grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colunas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de colunas da matriz do grafo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Grafo* Apontador para o grafo criado, ou NULL em caso de falha. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="137" column="7" bodyfile="Biblioteca/Grafo.c" bodystart="15" bodyend="26" declfile="Biblioteca/Estruturas.h" declline="137" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a9b9eb1808ea0f388f2cf131165b8d6ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AdicionarVertice</definition>
+        <argsstring>(Grafo *grafo, Vertice *verticeCriado)</argsstring>
+        <name>AdicionarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeCriado</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona um novo vértice ao grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Insere o vértice no final da lista ligada de vértices do grafo. Após a inserção, chama a função PercorrerGrafo para atualizar as ligações entre o novo vértice e os existentes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde o vértice será inserido. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeCriado</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice a adicionar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se o vértice foi adicionado com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="142" column="6" bodyfile="Biblioteca/Grafo.c" bodystart="38" bodyend="56" declfile="Biblioteca/Estruturas.h" declline="142" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a25b057885d271a291bdeb9af12f42511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerGrafo</definition>
+        <argsstring>(Grafo *grafo, Vertice *vertice)</argsstring>
+        <name>PercorrerGrafo</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Atualiza o grafo com as novas ligações e nefastas após inserção de um vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Atualiza o grafo com as novas ligações e nefastas após inserção de um vértice.</para>
+<para>Percorre todos os vértices do grafo e, sempre que encontra um vértice com a mesma frequência que o novo vértice inserido, cria uma aresta entre eles e identifica posições nefastas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser percorrido. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice recentemente inserido no grafo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se o processo foi realizado com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="147" column="6" bodyfile="Biblioteca/Grafo.c" bodystart="68" bodyend="81" declfile="Biblioteca/Estruturas.h" declline="147" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a533a7c57274c657db753cfac67146516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * CriarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna, char frequencia)</argsstring>
+        <name>CriarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>frequencia</declname>
+        </param>
+        <briefdescription>
+<para>Cria um novo vértice com dados especificados e insere-o no grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cria um novo vértice com dados especificados e insere-o no grafo.</para>
+<para>Define a posição e frequência do vértice, inicializa os seus campos internos e insere-o no grafo através da função AdicionarVertice.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo onde o vértice será inserido. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequencia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequência da antena. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice criado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="152" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="17" bodyend="32" declfile="Biblioteca/Estruturas.h" declline="152" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ab067dca496d8809ff753f95f9256f96d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EliminarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna)</argsstring>
+        <name>EliminarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Elimina um vértice do grafo com base na sua posição. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Elimina um vértice do grafo com base na sua posição.</para>
+<para>Procura o vértice na lista ligada do grafo, elimina todas as arestas que apontam para ele e remove-o da lista, libertando a memória.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o novo início da lista de vértices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="157" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="44" bodyend="78" declfile="Biblioteca/Estruturas.h" declline="157" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a43dcc1d73d9dd27f9e7288e87b5153d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EditarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna, char frequencia)</argsstring>
+        <name>EditarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>frequencia</declname>
+        </param>
+        <briefdescription>
+<para>Edita um vértice substituindo-o por um novo com frequência alterada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Edita um vértice substituindo-o por um novo com frequência alterada.</para>
+<para>Elimina o vértice atual na posição indicada e insere um novo vértice com a nova frequência.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição do vértice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequencia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nova frequência a atribuir. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice editado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="162" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="90" bodyend="95" declfile="Biblioteca/Estruturas.h" declline="162" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a76e91a128e5a4b14260e2d6af1d83b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>Vertice * EncontrarVertice</definition>
+        <argsstring>(Grafo *grafo, int linha, int coluna)</argsstring>
+        <name>EncontrarVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>linha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>coluna</declname>
+        </param>
+        <briefdescription>
+<para>Procura e retorna um vértice com base na sua posição. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Procura e retorna um vértice com base na sua posição.</para>
+<para>Percorre a lista ligada de vértices até encontrar um com as coordenadas especificadas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linha da posição a procurar. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coluna</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coluna da posição a procurar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vertice* Apontador para o vértice encontrado, ou NULL se não existir. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="167" column="9" bodyfile="Biblioteca/Vertice.c" bodystart="106" bodyend="118" declfile="Biblioteca/Estruturas.h" declline="167" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a1e6be863ed49892f7e938596c8d6e23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+        <definition>Aresta * CriarAresta</definition>
+        <argsstring>(Vertice *verticeAtual, Vertice *verticeInserido)</argsstring>
+        <name>CriarAresta</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeAtual</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeInserido</declname>
+        </param>
+        <briefdescription>
+<para>Cria uma aresta entre dois vértices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cria uma aresta entre dois vértices.</para>
+<para>Aloca memória para uma nova aresta, liga-a ao vértice de destino e insere-a no final da lista de adjacências do vértice de origem. Inicializa os campos da aresta.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verticeAtual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeInserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Aresta* Apontador para a aresta criada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="172" column="8" bodyfile="Biblioteca/Aresta.c" bodystart="16" bodyend="41" declfile="Biblioteca/Estruturas.h" declline="172" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a931d7918d3f43c05762c901538def236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+        <definition>Aresta * EliminarAresta</definition>
+        <argsstring>(Vertice *verticeOrigem, Vertice *verticeDestino)</argsstring>
+        <name>EliminarAresta</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeOrigem</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeDestino</declname>
+        </param>
+        <briefdescription>
+<para>Remove uma aresta entre dois vértices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Percorre a lista de adjacências do vértice de origem e remove a ligação para o vértice de destino, se existir. Liberta a memória da aresta eliminada.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verticeOrigem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeDestino</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Aresta* Apontador para o início atualizado da lista de arestas do vértice de origem. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="177" column="8" bodyfile="Biblioteca/Aresta.c" bodystart="52" bodyend="76" declfile="Biblioteca/Estruturas.h" declline="177" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ae600f365b05d662e10d5e87affa09c36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AdicionarNefasta</definition>
+        <argsstring>(Nefasta *nefastaAtual, Nefasta *nefastaInserida, Vertice *verticeAtual, Vertice *verticeInserido)</argsstring>
+        <name>AdicionarNefasta</name>
+        <param>
+          <type><ref refid="struct_nefasta" kindref="compound">Nefasta</ref> *</type>
+          <declname>nefastaAtual</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_nefasta" kindref="compound">Nefasta</ref> *</type>
+          <declname>nefastaInserida</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeAtual</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeInserido</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona uma ou duas posições nefastas a uma aresta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Adiciona uma ou duas posições nefastas a uma aresta.</para>
+<para>Percorre a lista de arestas do vértice atual até encontrar a que liga ao vértice inserido e adiciona as estruturas <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> no fim da lista correspondente.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nefastaAtual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estrutura <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> associada à posição do vértice atual (pode ser NULL). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nefastaInserida</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estrutura <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> associada à posição do vértice inserido (pode ser NULL). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeAtual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeInserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se a inserção foi realizada com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="182" column="6" bodyfile="Biblioteca/Nefasta.c" bodystart="162" bodyend="207" declfile="Biblioteca/Estruturas.h" declline="182" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a3291297afbd5319cb04c36fbb04b6498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerArestasDFS</definition>
+        <argsstring>(Vertice *vertice)</argsstring>
+        <name>PercorrerArestasDFS</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>vertice</declname>
+        </param>
+        <briefdescription>
+<para>Realiza uma travessia em profundidade (DFS) a partir de um vértice. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza uma travessia em profundidade (DFS) a partir de um vértice.</para>
+<para>Marca o vértice atual como visitado, imprime-o, e continua a travessia em profundidade para todos os vértices adjacentes ainda não visitados.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o vértice inicial da travessia. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se a travessia foi realizada com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="187" column="6" bodyfile="Biblioteca/Aresta.c" bodystart="86" bodyend="109" declfile="Biblioteca/Estruturas.h" declline="187" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1ac2f2f192e57def4d675d1447597d683b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ExisteVertice</definition>
+        <argsstring>(Grafo *grafo, int atual[], int inserido[])</argsstring>
+        <name>ExisteVertice</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>atual</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inserido</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Verifica se já existe algum dos vértices em posições dadas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica se já existe algum dos vértices em posições dadas.</para>
+<para>Percorre a lista de vértices do grafo e verifica se alguma das posições dadas corresponde à posição de um vértice já existente.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array com as coordenadas da primeira posição. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array com as coordenadas da segunda posição. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se alguma das posições já existir no grafo. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="192" column="6" bodyfile="Biblioteca/Nefasta.c" bodystart="16" bodyend="33" declfile="Biblioteca/Estruturas.h" declline="192" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1aed1f128c5665a92d36e30453ea9c72a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CriarPosicaoNefasta</definition>
+        <argsstring>(Vertice *verticeAtual, Vertice *verticeInserido, Grafo *grafo)</argsstring>
+        <name>CriarPosicaoNefasta</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeAtual</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeInserido</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Calcula e cria posições nefastas com base nas posições de dois vértices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula e cria posições nefastas com base nas posições de dois vértices.</para>
+<para>Calcula as posições nefastas com base na distância entre os vértices. Verifica se as posições já existem no grafo ou se estão fora dos limites e chama a função CriarNefasta para as registar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verticeAtual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeInserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se a criação das posições nefastas foi realizada com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="197" column="6" bodyfile="Biblioteca/Nefasta.c" bodystart="47" bodyend="114" declfile="Biblioteca/Estruturas.h" declline="197" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a14149d0ef69cea9b06c6c8b6d9cf1413" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_nefasta" kindref="compound">Nefasta</ref> *</type>
+        <definition>Nefasta * CriarNefasta</definition>
+        <argsstring>(Vertice *verticeAtual, Vertice *verticeInserido, Grafo *grafo, int atual[], int inserido[])</argsstring>
+        <name>CriarNefasta</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeAtual</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>verticeInserido</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>atual</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inserido</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Cria estruturas <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> a partir de duas posições. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cria estruturas <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> a partir de duas posições.</para>
+<para>Verifica se as posições são válidas e dentro dos limites do grafo. Para cada posição válida, aloca memória para a estrutura <ref refid="struct_nefasta" kindref="compound">Nefasta</ref>, define os seus dados e chama AdicionarNefasta.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verticeAtual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verticeInserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posição nefastamente afetada no lado do vértice atual (pode ser NULL). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inserido</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Posição nefastamente afetada no lado do vértice inserido (pode ser NULL). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Nefasta* Retorna true após executar a criação. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="202" column="9" bodyfile="Biblioteca/Nefasta.c" bodystart="128" bodyend="149" declfile="Biblioteca/Estruturas.h" declline="202" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a581d5867c4b1f82d52daa44752f08c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerGrafoDFS</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>PercorrerGrafoDFS</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Realiza uma travessia em profundidade (DFS) sobre todo o grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza uma travessia em profundidade (DFS) sobre todo o grafo.</para>
+<para>Percorre todos os vértices do grafo e, para cada um que ainda não tenha sido visitado, inicia a procura em profundidade através da função PercorrerArestasDFS.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser percorrido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se a travessia foi realizada com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="207" column="6" bodyfile="Biblioteca/AlgoritmosProcura.c" bodystart="15" bodyend="28" declfile="Biblioteca/Estruturas.h" declline="207" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a84743b88aff403666363cf8b4ef96dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerVerticeDFS</definition>
+        <argsstring>(Vertice *primVertice, Vertice *segVertice)</argsstring>
+        <name>PercorrerVerticeDFS</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>primVertice</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>segVertice</declname>
+        </param>
+        <briefdescription>
+<para>Executa DFS entre dois vértices específicos. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executa DFS entre dois vértices específicos.</para>
+<para>Marca o vértice atual como visitado, imprime o caminho e verifica se corresponde ao vértice de destino. Caso não corresponda, continua a procurar recursivamente pelas arestas adjacentes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>primVertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de origem. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>segVertice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se o caminho entre os dois vértices for encontrado. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="212" column="6" bodyfile="Biblioteca/AlgoritmosProcura.c" bodystart="40" bodyend="43" declfile="Biblioteca/Estruturas.h" declline="212" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a8dd6d9b4c6829c136c34ff3ed960931e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerVerticeBFS</definition>
+        <argsstring>(Vertice *origem, Vertice *destino)</argsstring>
+        <name>PercorrerVerticeBFS</name>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>origem</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+          <declname>destino</declname>
+        </param>
+        <briefdescription>
+<para>Executa BFS a partir de um vértice, até encontrar (ou não) um destino. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executa BFS a partir de um vértice, até encontrar (ou não) um destino.</para>
+<para>Utiliza uma fila para visitar os vértices de forma sequencial e marca-os como visitados. Se um vértice de destino for especificado, a procura termina quando esse vértice é alcançado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de partida. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destino</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vértice de destino (opcional). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se o destino for alcançado ou a travessia for concluída. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="217" column="6" bodyfile="Biblioteca/AlgoritmosProcura.c" bodystart="69" bodyend="72" declfile="Biblioteca/Estruturas.h" declline="217" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a17d6b8d7e56470daddbbb082097ca9ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PercorrerGrafoBFS</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>PercorrerGrafoBFS</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Realiza uma travessia em largura (BFS) sobre todo o grafo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza uma travessia em largura (BFS) sobre todo o grafo.</para>
+<para>Percorre todos os vértices do grafo e inicia a procura em largura (BFS) a partir de cada vértice ainda não visitado, utilizando a função PercorrerVerticeBFS.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo a ser percorrido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se a travessia foi realizada com sucesso. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="222" column="6" bodyfile="Biblioteca/AlgoritmosProcura.c" bodystart="54" bodyend="57" declfile="Biblioteca/Estruturas.h" declline="222" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a9927d11b3108111beb1a86c635ba0858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_espera" kindref="compound">Espera</ref> *</type>
+        <definition>Espera * PercorrerArestasBFS</definition>
+        <argsstring>(Aresta *listaArestas, Espera *queue)</argsstring>
+        <name>PercorrerArestasBFS</name>
+        <param>
+          <type><ref refid="struct_aresta" kindref="compound">Aresta</ref> *</type>
+          <declname>listaArestas</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_espera" kindref="compound">Espera</ref> *</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+<para>Percorre as arestas de um vértice e adiciona os adjacentes à fila (BFS). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Percorre as arestas de um vértice e adiciona os adjacentes à fila (BFS).</para>
+<para>Para cada aresta da lista, verifica se o vértice adjacente ainda não foi visitado. Se não tiver sido, marca-o como visitado e adiciona-o à fila (estrutura <ref refid="struct_espera" kindref="compound">Espera</ref>) para futura exploração.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listaArestas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lista de arestas do vértice atual. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fila atual de vértices a visitar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Espera* Fila atualizada com os novos vértices descobertos. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="227" column="8" bodyfile="Biblioteca/Queue.c" bodystart="15" bodyend="47" declfile="Biblioteca/Estruturas.h" declline="227" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="_biblioteca_2_estruturas_8h_1a5ccd72e6331c1fd59e51304680d42abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntersecoesVertices</definition>
+        <argsstring>(Grafo *grafo)</argsstring>
+        <name>IntersecoesVertices</name>
+        <param>
+          <type><ref refid="struct_grafo" kindref="compound">Grafo</ref> *</type>
+          <declname>grafo</declname>
+        </param>
+        <briefdescription>
+<para>Verifica a existência de interseções diagonais entre vértices de frequências diferentes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Verifica a existência de interseções diagonais entre vértices de frequências diferentes.</para>
+<para>Percorre todas as combinações de vértices e, sempre que encontra dois com frequências diferentes, calcula se existe interseção diagonal com base na distância em x e y.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grafo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o grafo. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Se existir pelo menos uma interseção. </para>
+</simplesect>
+<simplesect kind="return"><para>false Se não existirem interseções diagonais. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="232" column="6" bodyfile="Biblioteca/Vertice.c" bodystart="130" bodyend="156" declfile="Biblioteca/Estruturas.h" declline="232" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="struct_dados" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posicao[2];</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}<sp/><ref refid="struct_dados" kindref="compound">Dados</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="struct_grafo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>primVertice;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensao[2];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}<sp/><ref refid="struct_grafo" kindref="compound">Grafo</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="struct_vertice" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dados" kindref="compound">Dados</ref><sp/>dados;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>proxVertice;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>primAresta;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>visitado;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_aresta" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>adjVertice;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>proxAresta;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>primNefasta;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="struct_nefasta" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>proxNefasta;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dados" kindref="compound">Dados</ref><sp/>dados;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="struct_espera" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_espera" kindref="compound">Espera</ref>*<sp/>proxVertice;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="struct_espera" kindref="compound">Espera</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct_vertice_file" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_dados" kindref="compound">Dados</ref><sp/>dados;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>visitado;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/><ref refid="struct_vertice_file" kindref="compound">VerticeFile</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="struct_aresta_file" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>origemPos[2];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>destinoPos[2];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><ref refid="struct_aresta_file" kindref="compound">ArestaFile</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="struct_nefasta_file" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>posicao[2];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/><ref refid="struct_nefasta_file" kindref="compound">NefastaFile</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Declarações<sp/>de<sp/>Funções<sp/>===</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>CarregarMatriz(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>nomeFicheiro);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ContarLinhasColunas(FILE*<sp/>grafoTXT,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensao[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>contadorVertice);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="struct_dados" kindref="compound">Dados</ref>*<sp/>EncontrarVertices(FILE*<sp/>grafoTXT,<sp/><ref refid="struct_dados" kindref="compound">Dados</ref>*<sp/>dados);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>CarregarVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarArestas(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CarregarArestas(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>GuardarNefastas(FILE*<sp/>ficheiro,<sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>aresta);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CarregarNefastas(FILE*<sp/>ficheiro,<sp/><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>aresta);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>CriarGrafo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linhas,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>colunas);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>AdicionarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeCriado);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerGrafo(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>CriarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EliminarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EditarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>frequencia);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>EncontrarVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>linha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coluna);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>CriarAresta(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeAtual,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeInserido);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>EliminarAresta(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeOrigem,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeDestino);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>AdicionarNefasta(<ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>nefastaAtual,<sp/><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>nefastaInserida,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeAtual,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeInserido);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerArestasDFS(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>vertice);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ExisteVertice(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atual[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inserido[]);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CriarPosicaoNefasta(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeAtual,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeInserido,<sp/><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><ref refid="struct_nefasta" kindref="compound">Nefasta</ref>*<sp/>CriarNefasta(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeAtual,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>verticeInserido,<sp/><ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atual[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inserido[]);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerGrafoDFS(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerVerticeDFS(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>primVertice,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>segVertice);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerVerticeBFS(<ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>origem,<sp/><ref refid="struct_vertice" kindref="compound">Vertice</ref>*<sp/>destino);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PercorrerGrafoBFS(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><ref refid="struct_espera" kindref="compound">Espera</ref>*<sp/>PercorrerArestasBFS(<ref refid="struct_aresta" kindref="compound">Aresta</ref>*<sp/>listaArestas,<sp/><ref refid="struct_espera" kindref="compound">Espera</ref>*<sp/>queue);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IntersecoesVertices(<ref refid="struct_grafo" kindref="compound">Grafo</ref>*<sp/>grafo);</highlight></codeline>
+    </programlisting>
+    <location file="Biblioteca/Estruturas.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_aresta_file" kind="struct" language="C++" prot="public">
+    <compoundname>ArestaFile</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_aresta_file_1a653088ec864ede105bc1b2c60520db6b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int origemPos</definition>
+        <argsstring>[2]</argsstring>
+        <name>origemPos</name>
+        <qualifiedname>ArestaFile::origemPos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="74" column="5" bodyfile="Biblioteca/Estruturas.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_aresta_file_1a4f6fe7b042558cdcec7daf6d18f97752" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int destinoPos</definition>
+        <argsstring>[2]</argsstring>
+        <name>destinoPos</name>
+        <qualifiedname>ArestaFile::destinoPos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="75" column="5" bodyfile="Biblioteca/Estruturas.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura utilizada para guardar uma aresta em ficheiro binário. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Biblioteca/Estruturas.h" line="72" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="struct_aresta_file_1a4f6fe7b042558cdcec7daf6d18f97752" prot="public" virt="non-virtual"><scope>ArestaFile</scope><name>destinoPos</name></member>
+      <member refid="struct_aresta_file_1a653088ec864ede105bc1b2c60520db6b" prot="public" virt="non-virtual"><scope>ArestaFile</scope><name>origemPos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_nefasta" kind="struct" language="C++" prot="public">
+    <compoundname>Nefasta</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_nefasta_1a24918f5a57f165d4bcbe165a72707b7f" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_nefasta" kindref="compound">Nefasta</ref> *</type>
+        <definition>struct Nefasta * proxNefasta</definition>
+        <argsstring></argsstring>
+        <name>proxNefasta</name>
+        <qualifiedname>Nefasta::proxNefasta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="47" column="15" bodyfile="Biblioteca/Estruturas.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_nefasta_1ac1422da85efeb7ca92e69d3758c0209f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_dados" kindref="compound">Dados</ref></type>
+        <definition>Dados dados</definition>
+        <argsstring></argsstring>
+        <name>dados</name>
+        <qualifiedname>Nefasta::dados</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="48" column="7" bodyfile="Biblioteca/Estruturas.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura que representa uma posição nefasta, associada a uma aresta. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Dados</label>
+        <link refid="struct_dados"/>
+      </node>
+      <node id="1">
+        <label>Nefasta</label>
+        <link refid="struct_nefasta"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>proxNefasta</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Biblioteca/Estruturas.h" line="45" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="46" bodyend="49"/>
+    <listofallmembers>
+      <member refid="struct_nefasta_1ac1422da85efeb7ca92e69d3758c0209f" prot="public" virt="non-virtual"><scope>Nefasta</scope><name>dados</name></member>
+      <member refid="struct_nefasta_1a24918f5a57f165d4bcbe165a72707b7f" prot="public" virt="non-virtual"><scope>Nefasta</scope><name>proxNefasta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

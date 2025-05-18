@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="struct_aresta" kind="struct"><name>Aresta</name>
+    <member refid="struct_aresta_1a99bddf7062ab8a227bea40bfc9335c26" kind="variable"><name>adjVertice</name></member>
+    <member refid="struct_aresta_1ac2cf601be20304ea05922827b7d2e3b9" kind="variable"><name>proxAresta</name></member>
+    <member refid="struct_aresta_1a02b362aec6e38e5dda19737b5640371d" kind="variable"><name>primNefasta</name></member>
+  </compound>
+  <compound refid="struct_aresta_file" kind="struct"><name>ArestaFile</name>
+    <member refid="struct_aresta_file_1a653088ec864ede105bc1b2c60520db6b" kind="variable"><name>origemPos</name></member>
+    <member refid="struct_aresta_file_1a4f6fe7b042558cdcec7daf6d18f97752" kind="variable"><name>destinoPos</name></member>
+  </compound>
+  <compound refid="struct_dados" kind="struct"><name>Dados</name>
+    <member refid="struct_dados_1a72531b1d83250cd2d995c9cd3169f38c" kind="variable"><name>posicao</name></member>
+    <member refid="struct_dados_1a643fe33fe56ce4c44a24d28a121d5d23" kind="variable"><name>frequencia</name></member>
+  </compound>
+  <compound refid="struct_espera" kind="struct"><name>Espera</name>
+    <member refid="struct_espera_1a8cf8f3c26f8a6dc8b03932b96fc8eaca" kind="variable"><name>vertice</name></member>
+    <member refid="struct_espera_1a153c8b385890dc67954f9ea2e5540685" kind="variable"><name>proxVertice</name></member>
+  </compound>
+  <compound refid="struct_grafo" kind="struct"><name>Grafo</name>
+    <member refid="struct_grafo_1a060801f800fc7252ab190dd134aca17e" kind="variable"><name>primVertice</name></member>
+    <member refid="struct_grafo_1ae1548e74ff2050e688599051c5d4a5cd" kind="variable"><name>dimensao</name></member>
+  </compound>
+  <compound refid="struct_nefasta" kind="struct"><name>Nefasta</name>
+    <member refid="struct_nefasta_1a24918f5a57f165d4bcbe165a72707b7f" kind="variable"><name>proxNefasta</name></member>
+    <member refid="struct_nefasta_1ac1422da85efeb7ca92e69d3758c0209f" kind="variable"><name>dados</name></member>
+  </compound>
+  <compound refid="struct_nefasta_file" kind="struct"><name>NefastaFile</name>
+    <member refid="struct_nefasta_file_1a72531b1d83250cd2d995c9cd3169f38c" kind="variable"><name>posicao</name></member>
+    <member refid="struct_nefasta_file_1a643fe33fe56ce4c44a24d28a121d5d23" kind="variable"><name>frequencia</name></member>
+  </compound>
+  <compound refid="struct_vertice" kind="struct"><name>Vertice</name>
+    <member refid="struct_vertice_1ac1422da85efeb7ca92e69d3758c0209f" kind="variable"><name>dados</name></member>
+    <member refid="struct_vertice_1ac158ff84376e0086b4c05779cb1ee8ab" kind="variable"><name>proxVertice</name></member>
+    <member refid="struct_vertice_1a793cebcd081c590183fea692702542a0" kind="variable"><name>primAresta</name></member>
+    <member refid="struct_vertice_1a7432ec6b760cca5a63570ce7d9f9565b" kind="variable"><name>visitado</name></member>
+  </compound>
+  <compound refid="struct_vertice_file" kind="struct"><name>VerticeFile</name>
+    <member refid="struct_vertice_file_1ac1422da85efeb7ca92e69d3758c0209f" kind="variable"><name>dados</name></member>
+    <member refid="struct_vertice_file_1a7432ec6b760cca5a63570ce7d9f9565b" kind="variable"><name>visitado</name></member>
+  </compound>
+  <compound refid="_algoritmos_procura_8c" kind="file"><name>AlgoritmosProcura.c</name>
+    <member refid="_algoritmos_procura_8c_1a581d5867c4b1f82d52daa44752f08c26" kind="function"><name>PercorrerGrafoDFS</name></member>
+    <member refid="_algoritmos_procura_8c_1a84743b88aff403666363cf8b4ef96dd6" kind="function"><name>PercorrerVerticeDFS</name></member>
+    <member refid="_algoritmos_procura_8c_1a17d6b8d7e56470daddbbb082097ca9ff" kind="function"><name>PercorrerGrafoBFS</name></member>
+    <member refid="_algoritmos_procura_8c_1a8dd6d9b4c6829c136c34ff3ed960931e" kind="function"><name>PercorrerVerticeBFS</name></member>
+  </compound>
+  <compound refid="_aresta_8c" kind="file"><name>Aresta.c</name>
+    <member refid="_aresta_8c_1a1e6be863ed49892f7e938596c8d6e23d" kind="function"><name>CriarAresta</name></member>
+    <member refid="_aresta_8c_1a931d7918d3f43c05762c901538def236" kind="function"><name>EliminarAresta</name></member>
+    <member refid="_aresta_8c_1a3291297afbd5319cb04c36fbb04b6498" kind="function"><name>PercorrerArestasDFS</name></member>
+  </compound>
+  <compound refid="_dados_8c" kind="file"><name>Dados.c</name>
+    <member refid="_dados_8c_1aac4bde2f2384ec7574401c6a2b12d7f2" kind="function"><name>CarregarMatriz</name></member>
+    <member refid="_dados_8c_1aca8cdf55747e5ec0a4767abfda75bf95" kind="function"><name>ContarLinhasColunas</name></member>
+    <member refid="_dados_8c_1a8ce99bb6d7a08df3a6f4dd07cb856bfd" kind="function"><name>EncontrarVertices</name></member>
+    <member refid="_dados_8c_1ae2e04f9441ec5405dd900a5e0c910613" kind="function"><name>GuardarVertices</name></member>
+    <member refid="_dados_8c_1a2443c9ceb3098fd64a9de47a3ea3d436" kind="function"><name>CarregarVertices</name></member>
+    <member refid="_dados_8c_1ae8cc9a1eb2a5a3db9dab77fbcf88c613" kind="function"><name>GuardarArestas</name></member>
+    <member refid="_dados_8c_1a73edb3e9b2eada24cd836e7a8b0072bd" kind="function"><name>CarregarArestas</name></member>
+    <member refid="_dados_8c_1ad9eec3b7946d43fcbb7b0c882b0953b3" kind="function"><name>GuardarNefastas</name></member>
+    <member refid="_dados_8c_1aacc0fe5ef8915ecb1c2057383ccc6b13" kind="function"><name>CarregarNefastas</name></member>
+  </compound>
+  <compound refid="_biblioteca_2_estruturas_8h" kind="file"><name>Estruturas.h</name>
+    <member refid="_biblioteca_2_estruturas_8h_1aac4bde2f2384ec7574401c6a2b12d7f2" kind="function"><name>CarregarMatriz</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1afdd7a44c6441b1ac440935092bd85084" kind="function"><name>ContarLinhasColunas</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a8ce99bb6d7a08df3a6f4dd07cb856bfd" kind="function"><name>EncontrarVertices</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ae2e04f9441ec5405dd900a5e0c910613" kind="function"><name>GuardarVertices</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a2443c9ceb3098fd64a9de47a3ea3d436" kind="function"><name>CarregarVertices</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ae8cc9a1eb2a5a3db9dab77fbcf88c613" kind="function"><name>GuardarArestas</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a73edb3e9b2eada24cd836e7a8b0072bd" kind="function"><name>CarregarArestas</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ad9eec3b7946d43fcbb7b0c882b0953b3" kind="function"><name>GuardarNefastas</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1aacc0fe5ef8915ecb1c2057383ccc6b13" kind="function"><name>CarregarNefastas</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a3e1bcf3f33a4ca08c529b2583480ec98" kind="function"><name>CriarGrafo</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a9b9eb1808ea0f388f2cf131165b8d6ef" kind="function"><name>AdicionarVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a25b057885d271a291bdeb9af12f42511" kind="function"><name>PercorrerGrafo</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a533a7c57274c657db753cfac67146516" kind="function"><name>CriarVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ab067dca496d8809ff753f95f9256f96d" kind="function"><name>EliminarVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a43dcc1d73d9dd27f9e7288e87b5153d7" kind="function"><name>EditarVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a76e91a128e5a4b14260e2d6af1d83b62" kind="function"><name>EncontrarVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a1e6be863ed49892f7e938596c8d6e23d" kind="function"><name>CriarAresta</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a931d7918d3f43c05762c901538def236" kind="function"><name>EliminarAresta</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ae600f365b05d662e10d5e87affa09c36" kind="function"><name>AdicionarNefasta</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a3291297afbd5319cb04c36fbb04b6498" kind="function"><name>PercorrerArestasDFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1ac2f2f192e57def4d675d1447597d683b" kind="function"><name>ExisteVertice</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1aed1f128c5665a92d36e30453ea9c72a4" kind="function"><name>CriarPosicaoNefasta</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a14149d0ef69cea9b06c6c8b6d9cf1413" kind="function"><name>CriarNefasta</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a581d5867c4b1f82d52daa44752f08c26" kind="function"><name>PercorrerGrafoDFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a84743b88aff403666363cf8b4ef96dd6" kind="function"><name>PercorrerVerticeDFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a8dd6d9b4c6829c136c34ff3ed960931e" kind="function"><name>PercorrerVerticeBFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a17d6b8d7e56470daddbbb082097ca9ff" kind="function"><name>PercorrerGrafoBFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a9927d11b3108111beb1a86c635ba0858" kind="function"><name>PercorrerArestasBFS</name></member>
+    <member refid="_biblioteca_2_estruturas_8h_1a5ccd72e6331c1fd59e51304680d42abf" kind="function"><name>IntersecoesVertices</name></member>
+  </compound>
+  <compound refid="_camada_main_2_estruturas_8h" kind="file"><name>Estruturas.h</name>
+    <member refid="_camada_main_2_estruturas_8h_1aacb2feada17ca3f9edcd1c57787cf4ca" kind="define"><name>FICHEIRO</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1aac4bde2f2384ec7574401c6a2b12d7f2" kind="function"><name>CarregarMatriz</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1afdd7a44c6441b1ac440935092bd85084" kind="function"><name>ContarLinhasColunas</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a8ce99bb6d7a08df3a6f4dd07cb856bfd" kind="function"><name>EncontrarVertices</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ae2e04f9441ec5405dd900a5e0c910613" kind="function"><name>GuardarVertices</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a2443c9ceb3098fd64a9de47a3ea3d436" kind="function"><name>CarregarVertices</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ae8cc9a1eb2a5a3db9dab77fbcf88c613" kind="function"><name>GuardarArestas</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a73edb3e9b2eada24cd836e7a8b0072bd" kind="function"><name>CarregarArestas</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ad9eec3b7946d43fcbb7b0c882b0953b3" kind="function"><name>GuardarNefastas</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1aacc0fe5ef8915ecb1c2057383ccc6b13" kind="function"><name>CarregarNefastas</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a3e1bcf3f33a4ca08c529b2583480ec98" kind="function"><name>CriarGrafo</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a9b9eb1808ea0f388f2cf131165b8d6ef" kind="function"><name>AdicionarVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a25b057885d271a291bdeb9af12f42511" kind="function"><name>PercorrerGrafo</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a533a7c57274c657db753cfac67146516" kind="function"><name>CriarVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ab067dca496d8809ff753f95f9256f96d" kind="function"><name>EliminarVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a43dcc1d73d9dd27f9e7288e87b5153d7" kind="function"><name>EditarVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a76e91a128e5a4b14260e2d6af1d83b62" kind="function"><name>EncontrarVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a1e6be863ed49892f7e938596c8d6e23d" kind="function"><name>CriarAresta</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a931d7918d3f43c05762c901538def236" kind="function"><name>EliminarAresta</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ae600f365b05d662e10d5e87affa09c36" kind="function"><name>AdicionarNefasta</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a3291297afbd5319cb04c36fbb04b6498" kind="function"><name>PercorrerArestasDFS</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1ac2f2f192e57def4d675d1447597d683b" kind="function"><name>ExisteVertice</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1aed1f128c5665a92d36e30453ea9c72a4" kind="function"><name>CriarPosicaoNefasta</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a14149d0ef69cea9b06c6c8b6d9cf1413" kind="function"><name>CriarNefasta</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a581d5867c4b1f82d52daa44752f08c26" kind="function"><name>PercorrerGrafoDFS</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a84743b88aff403666363cf8b4ef96dd6" kind="function"><name>PercorrerVerticeDFS</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a8dd6d9b4c6829c136c34ff3ed960931e" kind="function"><name>PercorrerVerticeBFS</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a17d6b8d7e56470daddbbb082097ca9ff" kind="function"><name>PercorrerGrafoBFS</name></member>
+    <member refid="_camada_main_2_estruturas_8h_1a9927d11b3108111beb1a86c635ba0858" kind="function"><name>PercorrerArestasBFS</name></member>
+  </compound>
+  <compound refid="_grafo_8c" kind="file"><name>Grafo.c</name>
+    <member refid="_grafo_8c_1a3e1bcf3f33a4ca08c529b2583480ec98" kind="function"><name>CriarGrafo</name></member>
+    <member refid="_grafo_8c_1a9b9eb1808ea0f388f2cf131165b8d6ef" kind="function"><name>AdicionarVertice</name></member>
+    <member refid="_grafo_8c_1a25b057885d271a291bdeb9af12f42511" kind="function"><name>PercorrerGrafo</name></member>
+  </compound>
+  <compound refid="_nefasta_8c" kind="file"><name>Nefasta.c</name>
+    <member refid="_nefasta_8c_1ac2f2f192e57def4d675d1447597d683b" kind="function"><name>ExisteVertice</name></member>
+    <member refid="_nefasta_8c_1aed1f128c5665a92d36e30453ea9c72a4" kind="function"><name>CriarPosicaoNefasta</name></member>
+    <member refid="_nefasta_8c_1a14149d0ef69cea9b06c6c8b6d9cf1413" kind="function"><name>CriarNefasta</name></member>
+    <member refid="_nefasta_8c_1ae600f365b05d662e10d5e87affa09c36" kind="function"><name>AdicionarNefasta</name></member>
+  </compound>
+  <compound refid="_queue_8c" kind="file"><name>Queue.c</name>
+    <member refid="_queue_8c_1a9927d11b3108111beb1a86c635ba0858" kind="function"><name>PercorrerArestasBFS</name></member>
+  </compound>
+  <compound refid="_vertice_8c" kind="file"><name>Vertice.c</name>
+    <member refid="_vertice_8c_1a533a7c57274c657db753cfac67146516" kind="function"><name>CriarVertice</name></member>
+    <member refid="_vertice_8c_1ab067dca496d8809ff753f95f9256f96d" kind="function"><name>EliminarVertice</name></member>
+    <member refid="_vertice_8c_1a43dcc1d73d9dd27f9e7288e87b5153d7" kind="function"><name>EditarVertice</name></member>
+    <member refid="_vertice_8c_1a76e91a128e5a4b14260e2d6af1d83b62" kind="function"><name>EncontrarVertice</name></member>
+    <member refid="_vertice_8c_1a5ccd72e6331c1fd59e51304680d42abf" kind="function"><name>IntersecoesVertices</name></member>
+  </compound>
+  <compound refid="_apoio_main_8c" kind="file"><name>ApoioMain.c</name>
+    <member refid="_apoio_main_8c_1aeb4f709ce228bc283b3b08506e76ef7e" kind="function"><name>ListaVertices</name></member>
+    <member refid="_apoio_main_8c_1aa0a964e8783bc8048f92498d2fb5facb" kind="function"><name>MostraGrafo</name></member>
+    <member refid="_apoio_main_8c_1a3a2e5a1d7ec919921ac1550c27946723" kind="function"><name>ListaArestas</name></member>
+    <member refid="_apoio_main_8c_1a918026c2d3142332299c187b0dc5742a" kind="function"><name>ListaNefastas</name></member>
+    <member refid="_apoio_main_8c_1aba4134f8016dc5c5d2d128cc91d9ef3f" kind="function"><name>MostrarCaminho</name></member>
+    <member refid="_apoio_main_8c_1a817025e57a1aa601c380cecd632b4f09" kind="function"><name>MostrarMatriz</name></member>
+    <member refid="_apoio_main_8c_1afd643db04618a9467f7682297d11ab16" kind="function"><name>MostrarIntersecao</name></member>
+  </compound>
+  <compound refid="_apoio_main_8h" kind="file"><name>ApoioMain.h</name>
+    <member refid="_apoio_main_8h_1aa0a964e8783bc8048f92498d2fb5facb" kind="function"><name>MostraGrafo</name></member>
+    <member refid="_apoio_main_8h_1aeb4f709ce228bc283b3b08506e76ef7e" kind="function"><name>ListaVertices</name></member>
+    <member refid="_apoio_main_8h_1a3a2e5a1d7ec919921ac1550c27946723" kind="function"><name>ListaArestas</name></member>
+    <member refid="_apoio_main_8h_1a918026c2d3142332299c187b0dc5742a" kind="function"><name>ListaNefastas</name></member>
+    <member refid="_apoio_main_8h_1aba4134f8016dc5c5d2d128cc91d9ef3f" kind="function"><name>MostrarCaminho</name></member>
+    <member refid="_apoio_main_8h_1a817025e57a1aa601c380cecd632b4f09" kind="function"><name>MostrarMatriz</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_a7da3c08f763342eb88a22af443af26c" kind="dir"><name>Biblioteca</name>
+  </compound>
+  <compound refid="dir_23754cccd0624f6fcb0cc01facd471eb" kind="dir"><name>CamadaMain</name>
+  </compound>
+</doxygenindex>

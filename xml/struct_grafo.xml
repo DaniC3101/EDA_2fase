@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="struct_grafo" kind="struct" language="C++" prot="public">
+    <compoundname>Grafo</compoundname>
+    <includes refid="_biblioteca_2_estruturas_8h" local="no">Estruturas.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_grafo_1a060801f800fc7252ab190dd134aca17e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct_vertice" kindref="compound">Vertice</ref> *</type>
+        <definition>struct Vertice * primVertice</definition>
+        <argsstring></argsstring>
+        <name>primVertice</name>
+        <qualifiedname>Grafo::primVertice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="17" column="15" bodyfile="Biblioteca/Estruturas.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_grafo_1ae1548e74ff2050e688599051c5d4a5cd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dimensao</definition>
+        <argsstring>[2]</argsstring>
+        <name>dimensao</name>
+        <qualifiedname>Grafo::dimensao</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Biblioteca/Estruturas.h" line="18" column="5" bodyfile="Biblioteca/Estruturas.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Estrutura que representa o grafo, com lista de vértices e dimensão. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Aresta</label>
+        <link refid="struct_aresta"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>adjVertice</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxAresta</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>primNefasta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Dados</label>
+        <link refid="struct_dados"/>
+      </node>
+      <node id="1">
+        <label>Grafo</label>
+        <link refid="struct_grafo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>primVertice</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Nefasta</label>
+        <link refid="struct_nefasta"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>proxNefasta</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Vertice</label>
+        <link refid="struct_vertice"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dados</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>proxVertice</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>primAresta</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Biblioteca/Estruturas.h" line="15" column="1" bodyfile="Biblioteca/Estruturas.h" bodystart="16" bodyend="19"/>
+    <listofallmembers>
+      <member refid="struct_grafo_1ae1548e74ff2050e688599051c5d4a5cd" prot="public" virt="non-virtual"><scope>Grafo</scope><name>dimensao</name></member>
+      <member refid="struct_grafo_1a060801f800fc7252ab190dd134aca17e" prot="public" virt="non-virtual"><scope>Grafo</scope><name>primVertice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
